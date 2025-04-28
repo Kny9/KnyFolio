@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mon Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="bg-gradient-to-br from-gray-800 via-gray-900 to-black text-white">
+
+  <!-- HEADER -->
+  <header class="bg-gray-900 shadow-md p-4 flex justify-between items-center">
+    <img src="img/image.png" alt="Logo de mon portfolio" class="h-10">
+    
+
+    <!-- Bouton Menu pour les écrans larges -->
+    <div class="relative hidden lg:block">
+      <button id="menu-btn" class="text-white border border-gray-400 px-4 py-2 rounded hover:bg-gray-800 transition">
+        Menu
+      </button>
+
+      <!-- Menu déroulant -->
+      <div id="menu" class="absolute right-0 mt-2 w-48 bg-gray-800 shadow-lg border border-gray-700 rounded hidden">
+        <a href="index.html" class="block px-4 py-2 hover:bg-gray-700 text-white">Accueil</a>
+        <a href="projects.html" class="block px-4 py-2 hover:bg-gray-700 text-white">Projets</a>
+        <a href="about.html" class="block px-4 py-2 hover:bg-gray-700 text-white">À propos</a>
+        <a href="contact.html" class="block px-4 py-2 hover:bg-gray-700 text-white">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- SECTION D'INTRODUCTION -->
+  <main class="min-h-screen pt-24 px-4">
+    <section class="text-center">
+      <h2 class="text-6xl font-bold text-white mb-6"><br><br> Bienvenue sur mon portfolio</h2>
+        <h3 class="text-3xl"> Développeur junior | En recherche d'alternance</h3>
+        <p class="text-lg text-gray-300 max-w-2xl mx-auto mb-6">
+        <br>Je m'appelle METRAN Keny.
+        <br>Je suis un jeune développeur passionné d'informatique.
+        <br>Explorez mon travail et découvrez ce que je fais !
+      </p>
+
+      <div class="flex justify-center gap-6">
+        <a href="about.html" class="px-6 py-3 bg-white text-black rounded-md hover:bg-gray-300 transition">En savoir plus</a>
+        <a href="projects.html" class="px-6 py-3 bg-white text-black rounded-md hover:bg-gray-300 transition">Voir mes projets</a>
+      </div>
+    </section>
+  </main>
+  <!-- Lien vers le fichier JavaScript externe -->
+  <script src="js/script.js"></script>
+</body>
+
+</html>

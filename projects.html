@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projets</title>
+
+  <!-- Roboto Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+    }
+  </style>
+</head>
+
+<body class="bg-gradient-to-br from-gray-800 via-gray-900 to-black text-white">
+
+  <header class="bg-gray-900 shadow-md p-4 flex justify-between items-center">
+    <img src="img/image.png" alt="Logo de mon portfolio" class="h-10">
+
+    <!-- Bouton Menu pour les écrans larges -->
+    <div class="relative hidden lg:block">
+      <button id="menu-btn" class="text-white border border-gray-400 px-4 py-2 rounded hover:bg-gray-800 transition">
+        Menu
+      </button>
+
+      <!-- Menu déroulant -->
+      <div id="menu" class="absolute right-0 mt-2 w-48 bg-gray-800 shadow-lg border border-gray-700 rounded hidden">
+        <a href="index.html" class="block px-4 py-2 hover:bg-gray-700 text-white">Accueil</a>
+        <a href="projects.html" class="block px-4 py-2 hover:bg-gray-700 text-white">Projets</a>
+        <a href="about.html" class="block px-4 py-2 hover:bg-gray-700 text-white">À propos</a>
+        <a href="contact.html" class="block px-4 py-2 hover:bg-gray-700 text-white">Contact</a>
+      </div>
+    </div>
+  </header>
+  <br><br><br><div class="text-center">
+    <h2 class="text-5xl font-bold text-white mb-2">Mes Projects récents </h2>
+    </div>
+  <main class="min-h-screen flex items-center justify-center text-center px-6 pt-20">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-6">
+
+      <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+
+<!-- Projet 1 -->
+<div x-data="{ open: false }" class="bg-gray-800 p-4 rounded-lg shadow hover:shadow-lg transition duration-300 relative">
+  <img @click="open = true" src="img/etnaflix.png" alt="Projet 2" class="rounded mb-4 cursor-pointer transform transition duration-300 hover:scale-105">
+    <a href="https://github.com/Kny9/Keny-s.mflix" target="_blank">
+      <button class="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg transition duration-300">
+        Voir le projet sur GitHub
+      </button>
+    </a>
+    <div x-show="open" @click.away="open = false" class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center rounded-lg">
+      <div class="bg-white p-6 rounded-lg shadow-lg text-gray-800 max-w-sm w-full">
+        <h2 class="text-xl font-bold mb-2">Keny's.mflix</h2>
+        <p class="text-sm mb-4">Application de catalogue de film réalisé avec HTML, CSS et JavaScript.</p>
+        <button @click="open = false" class="mt-2 bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded transition duration-300">
+          Fermer
+        </button>
+      </div>
+    </div>
+</div>
+
+<!-- Projet 2 -->
+<div x-data="{ open: false }" class="bg-gray-800 p-4 rounded-lg shadow hover:shadow-lg transition duration-300 relative">
+  <img @click="open = true" src="img/pfc.png" alt="Projet 2" class="rounded mb-4 cursor-pointer transform transition duration-300 hover:scale-105">
+    <a href="https://github.com/Kny9/PierreFeuilleCiseau" target="_blank">
+      <button class="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg transition duration-300">
+        Voir le projet sur GitHub
+      </button>
+    </a>
+    <div x-show="open" @click.away="open = false" class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center rounded-lg">
+      <div class="bg-white p-6 rounded-lg shadow-lg text-gray-800 max-w-sm w-full">
+        <h2 class="text-xl font-bold mb-2">Pierre-Feuille-Ciseau</h2>
+        <p class="text-sm mb-4">Un petit jeu Pierre-Feuille-Ciseau contre l'ordinateur, simple et fun en JavaScript.</p>
+        <button @click="open = false" class="mt-2 bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded transition duration-300">
+          Fermer
+        </button>
+      </div>
+    </div>
+</div>
+
+<!-- Projet 3 -->
+<div x-data="{ open: false }" class="bg-gray-800 p-4 rounded-lg shadow hover:shadow-lg transition duration-300 relative">
+  <img @click="open = true" src="img/franceinter.png" alt="Projet 2" class="rounded mb-4 cursor-pointer transform transition duration-300 hover:scale-105">
+    <a href="https://github.com/Kny9/FranceInter" target="_blank">
+      <button class="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg transition duration-300">
+        Voir le projet sur GitHub
+      </button>
+    </a>
+    <div x-show="open" @click.away="open = false" class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center rounded-lg">
+      <div class="bg-white p-6 rounded-lg shadow-lg text-gray-800 max-w-sm w-full">
+        <h2 class="text-xl font-bold mb-2">France Inter</h2>
+        <p class="text-sm mb-4">Insipé d'image de France Inter, focus sur design, responsive, et audio streaming en HTML.</p>
+        <button @click="open = false" class="mt-2 bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded transition duration-300">
+          Fermer
+        </button>
+      </div>
+    </div>
+</div>
+
+<!-- Projet 4 -->
+<div x-data="{ open: false }" class="bg-gray-800 p-4 rounded-lg shadow hover:shadow-lg transition duration-300 relative">
+  <img @click="open = true" src="img/prix.png" alt="Projet 2" class="rounded mb-4 cursor-pointer transform transition duration-300 hover:scale-105">
+    <a href="https://github.com/Kny9/JustePrix" target="_blank">
+      <button class="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg transition duration-300">
+        Voir le projet sur GitHub
+      </button>
+    </a>
+    <div x-show="open" @click.away="open = false" class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center rounded-lg">
+      <div class="bg-white p-6 rounded-lg shadow-lg text-gray-800 max-w-sm w-full">
+        <h2 class="text-xl font-bold mb-2">Juste Prix</h2>
+        <p class="text-sm mb-4">Jeu du juste prix codé en Python, devinez le prix secret avec des indices !</p>
+        <button @click="open = false" class="mt-2 bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded transition duration-300">
+          Fermer
+        </button>
+      </div>
+    </div>
+</div>
+
+<!-- Projet 5 -->
+<div x-data="{ open: false }" class="bg-gray-800 p-4 rounded-lg shadow hover:shadow-lg transition duration-300 relative">
+  <img @click="open = true" src="img/generator.png" alt="Projet 2" class="rounded mb-4 cursor-pointer transform transition duration-300 hover:scale-105">
+    <a href="https://github.com/Kny9/MygeneratorPrime" target="_blank">
+      <button class="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg transition duration-300">
+        Voir le projet sur GitHub
+      </button>
+    </a>
+    <div x-show="open" @click.away="open = false" class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center rounded-lg">
+      <div class="bg-white p-6 rounded-lg shadow-lg text-gray-800 max-w-sm w-full">
+        <h2 class="text-xl font-bold mb-2">GeneratorPrime</h2>
+        <p class="text-sm mb-4">Générateur d'affiche de recherche type One Piece avec options personnalisables.</p>
+        <button @click="open = false" class="mt-2 bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded transition duration-300">
+          Fermer
+        </button>
+      </div>
+    </div>
+</div>
+
+<!-- Projet 6 -->
+<div x-data="{ open: false }" class="bg-gray-800 p-4 rounded-lg shadow hover:shadow-lg transition duration-300 relative">
+  <img @click="open = true" src="img/calculator.png" alt="Projet 2" class="rounded mb-4 cursor-pointer transform transition duration-300 hover:scale-105">
+    <a href="https://github.com/Kny9/Calculator" target="_blank">
+      <button class="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg transition duration-300">
+        Voir le projet sur GitHub
+      </button>
+    </a>
+    <div x-show="open" @click.away="open = false" class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center rounded-lg">
+      <div class="bg-white p-6 rounded-lg shadow-lg text-gray-800 max-w-sm w-full">
+        <h2 class="text-xl font-bold mb-2">Calculatrice</h2>
+        <p class="text-sm mb-4">Petite calculatrice fonctionnelle faite en HTML, CSS.</p>
+        <button @click="open = false" class="mt-2 bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded transition duration-300">
+          Fermer
+        </button>
+      </div>
+    </div>
+</div>
+
+<!--7-->
+<div x-data="{ open: false }" class="bg-gray-800 p-4 rounded-lg shadow hover:shadow-lg transition duration-300 relative">
+  <img @click="open = true" src="img/quizmusical.png" alt="Projet 2" class="rounded mb-4 cursor-pointer transform transition duration-300 hover:scale-105">
+    <a href="https://github.com/Kny9/quiz-musical" target="_blank">
+      <button class="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg transition duration-300">
+        Voir le projet sur GitHub
+      </button>
+    </a>
+    <div x-show="open" @click.away="open = false" class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center rounded-lg">
+      <div class="bg-white p-6 rounded-lg shadow-lg text-gray-800 max-w-sm w-full">
+        <h2 class="text-xl font-bold mb-2">Quiz Musical</h2>
+        <p class="text-sm mb-4">Jeu musical interactif où il faut deviner des musiques, codé en Python !</p>
+        <button @click="open = false" class="mt-2 bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded transition duration-300">
+          Fermer
+        </button>
+      </div>
+    </div>
+</div>
+<div x-data="{ open: false }" class="bg-gray-800 p-4 rounded-lg shadow hover:shadow-lg transition duration-300 relative">
+  <img @click="open = true" src="img/arduino.png" alt="Projet 2" class="rounded mb-4 cursor-pointer transform transition duration-300 hover:scale-105">
+  <a href="https://github.com/Kny9/arduino" target="_blank">
+    <button class="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg transition duration-300">
+      Voir le projet sur GitHub
+    </button>
+  </a>
+  <div x-show="open" @click.away="open = false" class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center rounded-lg">
+    <div class="bg-white p-6 rounded-lg shadow-lg text-gray-800 max-w-sm w-full">
+      <h2 class="text-xl font-bold mb-2">Arduino</h2>
+      <p class="text-sm mb-4">Ce projet Arduino consiste à réaliser un montage simple, l’objectif est de contrôler l’allumage d’une LED via un programme Arduino</p>
+      <button @click="open = false" class="mt-2 bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded transition duration-300">
+        Fermer
+      </button>
+    </div>
+  </div>
+</div>
+
+  </main>
+  <br><br>
+  <script src="js/script.js"></script>
+</body>
+</html>

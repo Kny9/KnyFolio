@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>À propos</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+    }
+    .skill-badge {
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.skill-badge:hover {
+  transform: scale(1.15);
+}
+
+.progress-bar {
+  transition: background-color 0.3s ease;
+}
+
+  </style>
+</head>
+
+<body class="bg-gradient-to-br from-gray-800 via-gray-900 to-black text-white">
+
+  <header class="bg-gray-900 shadow-md p-4 flex justify-between items-center">
+    <img src="img/image.png" alt="Logo de mon portfolio" class="h-10">
+
+    <div class="relative hidden lg:block">
+      <button id="menu-btn" class="text-white border border-gray-400 px-4 py-2 rounded hover:bg-gray-800 transition">
+        Menu
+      </button>
+      <div id="menu" class="absolute right-0 mt-2 w-48 bg-gray-800 shadow-lg border border-gray-700 rounded hidden">
+        <a href="index.html" class="block px-4 py-2 hover:bg-gray-700 text-white">Accueil</a>
+        <a href="projects.html" class="block px-4 py-2 hover:bg-gray-700 text-white">Projets</a>
+        <a href="about.html" class="block px-4 py-2 hover:bg-gray-700 text-white">À propos</a>
+        <a href="contact.html" class="block px-4 py-2 hover:bg-gray-700 text-white">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="min-h-screen pt-24 px-4">
+    <section class="w-full max-w-4xl mx-auto text-left space-y-10">
+
+      <div class="text-center">
+        <h2 class="text-3xl font-bold text-white mb-2">À propos de moi</h2>
+        <p class="text-lg text-gray-300 max-w-2xl mx-auto">
+          Passionné d’informatique depuis la 2de, j’ai rapidement voulu aller au-delà
+des jeux vidéo et comprendre comment tout fonctionne. Le
+développement est devenu une vraie passion : créer des solutions,
+résoudre des problèmes et voir mes idées prendre forme. Aujourd’hui, je
+veux continuer à apprendre, maîtriser de nouvelles technologies et
+travailler sur des projets concrets et innovants en équipe ou seul.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="text-4xl font-bold text-white mb-10 text-center">Compétences</h3>
+        
+        <div class="flex flex-wrap gap-6 mb-10 justify-center">
+          <!-- HTML -->
+          <span data-skill="html" class="skill-badge bg-gray-800 p-4 rounded-full flex items-center justify-center transition transform cursor-pointer">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" class="w-14 h-14">
+          </span>
+          <!-- CSS -->
+          <span data-skill="css" class="skill-badge bg-gray-800 p-4 rounded-full flex items-center justify-center transition transform cursor-pointer">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" class="w-14 h-14">
+          </span>
+          <!-- JS -->
+          <span data-skill="javascript" class="skill-badge bg-gray-800 p-4 rounded-full flex items-center justify-center transition transform cursor-pointer">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" class="w-14 h-14">
+          </span>
+          <!-- React -->
+          <span data-skill="react" class="skill-badge bg-gray-800 p-4 rounded-full flex items-center justify-center transition transform cursor-pointer">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" class="w-14 h-14">
+          </span>
+          <!-- Node.js -->
+          <span data-skill="nodejs" class="skill-badge bg-gray-800 p-4 rounded-full flex items-center justify-center transition transform cursor-pointer">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" class="w-14 h-14">
+          </span>
+          <!-- Python -->
+          <span data-skill="python" class="skill-badge bg-gray-800 p-4 rounded-full flex items-center justify-center transition transform cursor-pointer">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="w-14 h-14">
+          </span>
+          <!-- Golang -->
+          <span data-skill="golang" class="skill-badge bg-gray-800 p-4 rounded-full flex items-center justify-center transition transform cursor-pointer">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg" alt="Golang" class="w-14 h-14">
+          </span>
+        </div>
+      
+        <!-- Progress bars -->
+        <div class="space-y-6">
+          <div>
+            <label class="text-white mb-1 block">HTML</label>
+            <div class="w-full bg-gray-700 rounded-full h-5 overflow-hidden">
+              <div id="bar-html" class="progress-bar bg-white h-5 transition-all duration-300" style="width: 70%;"></div>
+            </div>
+          </div>
+          <div>
+            <label class="text-white mb-1 block">CSS</label>
+            <div class="w-full bg-gray-700 rounded-full h-5 overflow-hidden">
+              <div id="bar-css" class="progress-bar bg-white h-5 transition-all duration-300" style="width: 65%;"></div>
+            </div>
+          </div>
+          <div>
+            <label class="text-white mb-1 block">JavaScript</label>
+            <div class="w-full bg-gray-700 rounded-full h-5 overflow-hidden">
+              <div id="bar-javascript" class="progress-bar bg-white h-5 transition-all duration-300" style="width: 60%;"></div>
+            </div>
+          </div>
+          <div>
+            <label class="text-white mb-1 block">React</label>
+            <div class="w-full bg-gray-700 rounded-full h-5 overflow-hidden">
+              <div id="bar-react" class="progress-bar bg-white h-5 transition-all duration-300" style="width: 65%;"></div>
+            </div>
+          </div>
+          <div>
+            <label class="text-white mb-1 block">Node.js</label>
+            <div class="w-full bg-gray-700 rounded-full h-5 overflow-hidden">
+              <div id="bar-nodejs" class="progress-bar bg-white h-5 transition-all duration-300" style="width: 65%;"></div>
+            </div>
+          </div>
+          <div>
+            <label class="text-white mb-1 block">Python</label>
+            <div class="w-full bg-gray-700 rounded-full h-5 overflow-hidden">
+              <div id="bar-python" class="progress-bar bg-white h-5 transition-all duration-300" style="width: 60%;"></div>
+            </div>
+          </div>
+          <div>
+            <label class="text-white mb-1 block">Golang</label>
+            <div class="w-full bg-gray-700 rounded-full h-5 overflow-hidden">
+              <div id="bar-golang" class="progress-bar bg-white h-5 transition-all duration-300" style="width: 50%;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center">
+        <a href="/img/mon-cv.pdf" target="_blank" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded transition">
+          Mon CV
+        </a>
+      </div>
+          
+    </section>
+  </main>
+<br><br><br>
+  <script src="js/script.js"></script>
+</body>
+</html>

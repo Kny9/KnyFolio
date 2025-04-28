@@ -1,0 +1,18 @@
+@keyframes fallAndBounce {
+    0% {
+      transform: translateY(0) scaleY(1);
+    }
+    60% {
+      transform: translateY(100vh) scaleY(0.8);
+    }
+    75% {
+      transform: translateY(85vh) scaleY(1.05);
+    }
+    90% {
+      transform: translateY(100vh) scaleY(0.95);
+    }
+    100% {
+      transform: translateY(100vh) scaleY(1);
+    }
+  }
+  
