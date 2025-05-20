@@ -2,72 +2,106 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Menu - Mon Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio - Menu stylé</title>
 
   <!-- Roboto -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
 
   <!-- Tailwind CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
     body {
       font-family: 'Roboto', sans-serif;
+      background: linear-gradient(135deg, #1a202c, #2d3748);
+    }
+
+    /* Hamburger animation */
+    #menu-btn.open span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+    #menu-btn.open span:nth-child(2) {
+      opacity: 0;
+    }
+    #menu-btn.open span:nth-child(3) {
+      transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    #menu-btn span {
+      display: block;
+      width: 24px;
+      height: 3px;
+      margin: 5px 0;
+      background-color: white;
+      border-radius: 2px;
+      transition: all 0.3s ease-in-out;
+    }
+
+    nav {
+      backdrop-filter: blur(10px);
+      background: rgba(26, 32, 44, 0.75); /* gris translucide */
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
     }
   </style>
 </head>
 
-<body class="bg-gradient-to-br from-gray-800 via-gray-900 to-black text-white">
+<body>
 
-  <!-- HEADER -->
-  <header class="bg-gray-900 shadow-md p-4 flex justify-between items-center">
-    <img src="img/image.png" alt="Logo de mon portfolio" class="h-10">
+  <header class="fixed top-0 left-0 w-full z-50">
+    <div class="max-w-7xl mx-auto flex items-center justify-between p-4">
+      <img src="img/image.png" alt="Logo" class="h-12" />
+
+      <!-- Menu desktop -->
+      <nav class="hidden lg:flex space-x-10 font-semibold text-white text-lg">
+        <a href="index.html" class="hover:text-blue-400 transition">Accueil</a>
+        <a href="projects.html" class="hover:text-blue-400 transition">Projets</a>
+        <a href="about.html" class="hover:text-blue-400 transition">À propos</a>
+        <a href="contact.html" class="hover:text-blue-400 transition">Contact</a>
+        <a href="img/mon-cv.pdf" target="_blank" class="hover:text-green-400 transition">Mon CV</a>
+      </nav>
+
+      <!-- Bouton hamburger mobile -->
+      <button id="menu-btn" aria-label="Menu" class="lg:hidden flex flex-col justify-center items-center cursor-pointer">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <!-- Menu mobile -->
+    <nav id="mobile-menu" class="hidden lg:hidden flex flex-col bg-gray-900 text-white px-6 py-8 space-y-6 font-semibold text-lg">
+      <a href="index.html" class="hover:text-blue-400 transition">Accueil</a>
+      <a href="projects.html" class="hover:text-blue-400 transition">Projets</a>
+      <a href="about.html" class="hover:text-blue-400 transition">À propos</a>
+      <a href="contact.html" class="hover:text-blue-400 transition">Contact</a>
+      <a href="img/mon-cv.pdf" target="_blank" class="hover:text-green-400 transition">Mon CV</a>
+    </nav>
   </header>
 
- <!-- PAGE DU MENU -->
-<main class="min-h-screen flex justify-center items-center px-4">
-  <div class="bg-gray-800 p-10 rounded-2xl shadow-lg border border-gray-700 w-full max-w-md">
-    <h2 class="text-4xl font-bold text-blue-400 mb-10 text-center">Menu</h2>
-    <ul class="space-y-5 text-xl">
-      <li>
-        <a href="index.html"
-           class="block px-6 py-4 rounded-md bg-gray-700 hover:bg-blue-600 transition-colors duration-200 text-white text-center shadow-sm">
-          1. Accueil
-        </a>
-      </li>
-      <li>
-        <a href="projects.html"
-           class="block px-6 py-4 rounded-md bg-gray-700 hover:bg-blue-600 transition-colors duration-200 text-white text-center shadow-sm">
-          2. Projets
-        </a>
-      </li>
-      <li>
-        <a href="about.html"
-           class="block px-6 py-4 rounded-md bg-gray-700 hover:bg-blue-600 transition-colors duration-200 text-white text-center shadow-sm">
-          3. À propos
-        </a>
-      </li>
-      <li>
-        <a href="contact.html"
-           class="block px-6 py-4 rounded-md bg-gray-700 hover:bg-blue-600 transition-colors duration-200 text-white text-center shadow-sm">
-          4. Contact
-        </a>
-      </li>
-      <li>
-        <a href="img/mon-cv.pdf" target="_blank"
-           class="block px-6 py-4 rounded-md bg-gray-700 hover:bg-green-500 transition-colors duration-200 text-white text-center shadow-sm">
-          5. Mon CV
-        </a>
-      </li>
-    </ul>
-  </div>
-</main>
-
+  <main class="pt-24 max-w-5xl mx-auto px-6 text-white">
+    <h1 class="text-5xl font-bold mb-8">Bienvenue sur mon portfolio</h1>
+    <p class="text-lg leading-relaxed">
+      Voici une belle page avec un menu stylé et responsive. Clique sur le hamburger en haut à droite pour ouvrir le menu sur mobile.
+    </p>
   </main>
-  <!-- Script JS -->
-  <script src="js/script.js"></script>
 
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      menuBtn.classList.toggle('open');
+    });
+
+    // Optionnel : fermer le menu en cliquant sur un lien mobile
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        menuBtn.classList.remove('open');
+      });
+    });
+  </script>
 </body>
 </html>
