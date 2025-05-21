@@ -1,44 +1,17 @@
 @keyframes fallAndBounce {
-  0% {
-    transform: translateY(0) scaleY(1);
+    0% {
+      transform: translateY(0) scaleY(1);
+    }
+    60% {
+      transform: translateY(100vh) scaleY(0.8);
+    }
+    75% {
+      transform: translateY(85vh) scaleY(1.05);
+    }
+    90% {
+      transform: translateY(100vh) scaleY(0.95);
+    }
+    100% {
+      transform: translateY(100vh) scaleY(1);
+    }
   }
-  60% {
-    transform: translateY(100vh) scaleY(0.8);
-  }
-  75% {
-    transform: translateY(85vh) scaleY(1.05);
-  }
-  90% {
-    transform: translateY(100vh) scaleY(0.95);
-  }
-  100% {
-    transform: translateY(100vh) scaleY(1);
-  }
-}
-
-/* Reset de base */
-* {
-  box-sizing: border-box;
-}
-
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  background: linear-gradient(to bottom right, #1f2937, #111827, #000);
-  overflow-x: hidden;
-  overflow-y: auto;
-  font-family: 'Roboto', sans-serif;
-  overscroll-behavior: none;
-}
-
-/* Conteneur principal */
-main {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 3rem 1.5rem;
-  text-align: center;
-}
