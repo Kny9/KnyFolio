@@ -8,7 +8,7 @@ const menuLinks = [
   { href: "projects.html", label: "Projets" },
   { href: "about.html", label: "À propos" },
   { href: "contact.html", label: "Contact" },
-  { href: "/img/mon-cv.pdf", label: "CV" },
+  { href: "img/mon-cv.pdf", label: "CV" },
 ];
 
 // Générer le menu
